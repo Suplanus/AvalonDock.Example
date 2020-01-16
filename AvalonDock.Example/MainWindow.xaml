@@ -14,13 +14,6 @@
     mc:Ignorable="d">
     <Grid>
         <avalonDock:DockingManager x:Name="dockingManager" AllowMixedOrientation="True">
-            <avalonDock:DockingManager.AnchorableTitleTemplate>
-                <StaticResource ResourceKey="DockingWindowTitleDataTemplate" />
-            </avalonDock:DockingManager.AnchorableTitleTemplate>
-
-            <avalonDock:DockingManager.AnchorableHeaderTemplate>
-                <StaticResource ResourceKey="DockingWindowHeaderTemplate" />
-            </avalonDock:DockingManager.AnchorableHeaderTemplate>
 
             <avalonDockLayout:LayoutRoot>
                 <avalonDockLayout:LayoutPanel Orientation="Horizontal">
@@ -33,8 +26,7 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laBricks"
-                                IconSource="../../Resources/Images/BrickCollection_16.png" />
+                                ContentId="laBricks" />
                         </avalonDockLayout:LayoutAnchorablePane>
 
                         <!--  Funktionen  -->
@@ -44,8 +36,7 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laFunctionCollection"
-                                IconSource="../../Resources/Images/FunctionCollection_16.png" />
+                                ContentId="laFunctionCollection" />
                         </avalonDockLayout:LayoutAnchorablePane>
 
 
@@ -60,8 +51,7 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laSolutions"
-                                IconSource="../../Resources/Images/Solution_16.png" />
+                                ContentId="laSolutions" />
 
                             <!--  Vorlagen  -->
                             <avalonDockLayout:LayoutAnchorable
@@ -69,8 +59,7 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laTemplateSolutions"
-                                IconSource="../../Resources/Images/TemplateSolution_16.png" />
+                                ContentId="laTemplateSolutions" />
 
                         </avalonDockLayout:LayoutAnchorablePane>
 
@@ -81,16 +70,14 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laProperties"
-                                IconSource="../../Resources/Images/Properties_16.png" />
+                                ContentId="laProperties" />
 
                             <avalonDockLayout:LayoutAnchorable
                                 Title="Platzhalter"
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laPlaceholder"
-                                IconSource="../../Resources/Images/Placeholder_16.png" />
+                                ContentId="laPlaceholder" />
 
                         </avalonDockLayout:LayoutAnchorablePane>
 
@@ -104,15 +91,8 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laDocuments"
-                                IconSource="../../Resources/Images/Sheets_16.png">
-                                <avalonDock:DockingManager
-                                    x:Name="dockingManagerDocuments"
-                                    AllowMixedOrientation="True"
-                                    BorderThickness="0">
-                                    <avalonDock:DockingManager.DocumentHeaderTemplate>
-                                        <StaticResource ResourceKey="DockingWindowTitleDataTemplate" />
-                                    </avalonDock:DockingManager.DocumentHeaderTemplate>
+                                ContentId="laDocuments">
+                                <avalonDock:DockingManager AllowMixedOrientation="True" BorderThickness="0">
                                     <avalonDockLayout:LayoutRoot>
                                         <avalonDockLayout:LayoutPanel Orientation="Horizontal">
                                             <avalonDockLayout:LayoutDocumentPaneGroup DockMinWidth="100">
@@ -133,8 +113,7 @@
                                 CanAutoHide="True"
                                 CanClose="False"
                                 CanHide="False"
-                                ContentId="laPreview"
-                                IconSource="../../Resources/Images/Preview_16.png" />
+                                ContentId="laPreview" />
                         </avalonDockLayout:LayoutAnchorablePane>
 
                         <!--  ErrorList  -->
@@ -145,9 +124,7 @@
                                 CanClose="False"
                                 CanHide="False"
                                 ContentId="laErrorlist"
-                                ToolTip="Errorlist">
-                                <Grid Name="gridErrors" />
-                            </avalonDockLayout:LayoutAnchorable>
+                                ToolTip="Errorlist" />
                         </avalonDockLayout:LayoutAnchorablePane>
 
 
