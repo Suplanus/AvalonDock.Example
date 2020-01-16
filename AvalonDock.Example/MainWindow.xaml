@@ -1,0 +1,165 @@
+﻿<Window
+    x:Class="AvalonDock.Example.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonDock="clr-namespace:Xceed.Wpf.AvalonDock;assembly=Xceed.Wpf.AvalonDock"
+    xmlns:avalonDockControls="clr-namespace:Xceed.Wpf.AvalonDock.Controls;assembly=Xceed.Wpf.AvalonDock"
+    xmlns:avalonDockLayout="clr-namespace:Xceed.Wpf.AvalonDock.Layout;assembly=Xceed.Wpf.AvalonDock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AvalonDock.Example"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <avalonDock:DockingManager x:Name="dockingManager" AllowMixedOrientation="True">
+            <avalonDock:DockingManager.AnchorableTitleTemplate>
+                <StaticResource ResourceKey="DockingWindowTitleDataTemplate" />
+            </avalonDock:DockingManager.AnchorableTitleTemplate>
+
+            <avalonDock:DockingManager.AnchorableHeaderTemplate>
+                <StaticResource ResourceKey="DockingWindowHeaderTemplate" />
+            </avalonDock:DockingManager.AnchorableHeaderTemplate>
+
+            <avalonDockLayout:LayoutRoot>
+                <avalonDockLayout:LayoutPanel Orientation="Horizontal">
+
+                    <avalonDockLayout:LayoutAnchorablePaneGroup DockMinWidth="300" Orientation="Vertical">
+                        <!--  Bausteine  -->
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Bausteine"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laBricks"
+                                IconSource="../../Resources/Images/BrickCollection_16.png" />
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+                        <!--  Funktionen  -->
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Funktionen"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laFunctionCollection"
+                                IconSource="../../Resources/Images/FunctionCollection_16.png" />
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+
+                    </avalonDockLayout:LayoutAnchorablePaneGroup>
+
+                    <avalonDockLayout:LayoutAnchorablePaneGroup DockMinWidth="300" Orientation="Vertical">
+
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <!--  Projektmappen  -->
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Projekte"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laSolutions"
+                                IconSource="../../Resources/Images/Solution_16.png" />
+
+                            <!--  Vorlagen  -->
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Vorlagen"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laTemplateSolutions"
+                                IconSource="../../Resources/Images/TemplateSolution_16.png" />
+
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+                        <!--  Properties  -->
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Eigenschaften"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laProperties"
+                                IconSource="../../Resources/Images/Properties_16.png" />
+
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Platzhalter"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laPlaceholder"
+                                IconSource="../../Resources/Images/Placeholder_16.png" />
+
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+                    </avalonDockLayout:LayoutAnchorablePaneGroup>
+
+                    <!--  Documents  -->
+                    <avalonDockLayout:LayoutAnchorablePaneGroup DockMinWidth="300" Orientation="Vertical">
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Blätter"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laDocuments"
+                                IconSource="../../Resources/Images/Sheets_16.png">
+                                <avalonDock:DockingManager
+                                    x:Name="dockingManagerDocuments"
+                                    AllowMixedOrientation="True"
+                                    BorderThickness="0">
+                                    <avalonDock:DockingManager.DocumentHeaderTemplate>
+                                        <StaticResource ResourceKey="DockingWindowTitleDataTemplate" />
+                                    </avalonDock:DockingManager.DocumentHeaderTemplate>
+                                    <avalonDockLayout:LayoutRoot>
+                                        <avalonDockLayout:LayoutPanel Orientation="Horizontal">
+                                            <avalonDockLayout:LayoutDocumentPaneGroup DockMinWidth="100">
+                                                <avalonDockLayout:LayoutDocumentPane />
+                                            </avalonDockLayout:LayoutDocumentPaneGroup>
+                                        </avalonDockLayout:LayoutPanel>
+                                    </avalonDockLayout:LayoutRoot>
+                                </avalonDock:DockingManager>
+                            </avalonDockLayout:LayoutAnchorable>
+                        </avalonDockLayout:LayoutAnchorablePane>
+                    </avalonDockLayout:LayoutAnchorablePaneGroup>
+
+                    <avalonDockLayout:LayoutAnchorablePaneGroup DockMinWidth="300" Orientation="Vertical">
+                        <avalonDockLayout:LayoutAnchorablePane>
+                            <!--  VORSCHAU  -->
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Vorschau"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laPreview"
+                                IconSource="../../Resources/Images/Preview_16.png" />
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+                        <!--  ErrorList  -->
+                        <avalonDockLayout:LayoutAnchorablePane DockHeight="100">
+                            <avalonDockLayout:LayoutAnchorable
+                                Title="Meldungen"
+                                CanAutoHide="True"
+                                CanClose="False"
+                                CanHide="False"
+                                ContentId="laErrorlist"
+                                ToolTip="Errorlist">
+                                <Grid Name="gridErrors" />
+                            </avalonDockLayout:LayoutAnchorable>
+                        </avalonDockLayout:LayoutAnchorablePane>
+
+
+                    </avalonDockLayout:LayoutAnchorablePaneGroup>
+
+
+
+                </avalonDockLayout:LayoutPanel>
+
+
+
+            </avalonDockLayout:LayoutRoot>
+        </avalonDock:DockingManager>
+    </Grid>
+</Window>
